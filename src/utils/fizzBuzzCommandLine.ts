@@ -5,7 +5,7 @@ import { makeArray } from "./makeArray";
 
 export type TFizzBuzzArr = (number | "Fizz" | "Buzz" | "FizzBuzz")[];
 
-export function fizzBuzzCommandLine(inputNum: number): TFizzBuzzArr {
+export function fizzBuzzCommandLine(inputNum: number): string {
   const numArr = makeArray(inputNum);
   const fizzBuzzArr: TFizzBuzzArr = [];
   for (const num of numArr) {
@@ -19,7 +19,8 @@ export function fizzBuzzCommandLine(inputNum: number): TFizzBuzzArr {
       fizzBuzzArr.push(num);
     }
   }
-  return fizzBuzzArr;
+  const finalString: string = fizzBuzzArr.join(",");
+  return finalString;
 }
 
 const input = process.argv[2];

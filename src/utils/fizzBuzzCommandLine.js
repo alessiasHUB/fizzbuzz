@@ -23,7 +23,8 @@ function fizzBuzzCommandLine(inputNum) {
             fizzBuzzArr.push(num);
         }
     }
-    return fizzBuzzArr;
+    var finalString = fizzBuzzArr.join(",");
+    return finalString;
 }
 exports.fizzBuzzCommandLine = fizzBuzzCommandLine;
 var input = process.argv[2];
@@ -33,3 +34,6 @@ if (isNaN(parsedInput)) {
     process.exit(1);
 }
 console.log(fizzBuzzCommandLine(parsedInput));
+// run the program in the command line like this:
+// node index.js 10
+//   replace the ^^ with any number you want

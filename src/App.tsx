@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { fizzBuzz, TFizzBuzzArr } from "./utils/fizzBuzz";
+import { fizzBuzz } from "./utils/fizzBuzz";
 
 function App(): JSX.Element {
-  const [inputNum, setInputNum] = useState<string>();
-  const [fizzBuzzResult, setFizzBuzzResult] = useState<TFizzBuzzArr>([]);
+  const [inputNum, setInputNum] = useState<string>("");
+  const [fizzBuzzResult, setFizzBuzzResult] = useState<string>();
 
   const handleFizzBuzzBtn = () => {
     if (inputNum) {
@@ -21,9 +21,8 @@ function App(): JSX.Element {
       />
       <button onClick={handleFizzBuzzBtn}>FIZZBUZZ</button>
       <br />
-      {fizzBuzzResult &&
-        fizzBuzzResult.map((el, i) => <span key={i}>{el} </span>)}
-      {isNaN(Number(inputNum)) && <p>That's not a number</p>}
+      {fizzBuzzResult && <p>{fizzBuzzResult}</p>}
+      {isNaN(Number(inputNum)) && inputNum !== "" && <p>That's not a number</p>}
     </>
   );
 }

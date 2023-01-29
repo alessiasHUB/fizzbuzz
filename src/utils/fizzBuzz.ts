@@ -3,9 +3,9 @@ import { checkFizz } from "./checkFizz";
 import { checkFizzBuzz } from "./checkFizzBuzz";
 import { makeArray } from "./makeArray";
 
-export type TFizzBuzzArr = (number | "Fizz" | "Buzz" | "FizzBuzz")[];
+type TFizzBuzzArr = (number | "Fizz" | "Buzz" | "FizzBuzz")[];
 
-export function fizzBuzz(inputNum: number): TFizzBuzzArr {
+export function fizzBuzz(inputNum: number): string {
   const numArr = makeArray(inputNum);
   const fizzBuzzArr: TFizzBuzzArr = [];
   for (const num of numArr) {
@@ -19,5 +19,6 @@ export function fizzBuzz(inputNum: number): TFizzBuzzArr {
       fizzBuzzArr.push(num);
     }
   }
-  return fizzBuzzArr;
+  const finalString: string = fizzBuzzArr.join(",");
+  return finalString;
 }
