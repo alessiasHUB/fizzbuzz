@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FizzBuzz, TFizzBuzzArr } from "./utils/FizzBuzz";
+import { fizzBuzz, TFizzBuzzArr } from "./utils/fizzBuzz";
 
 function App(): JSX.Element {
   const [inputNum, setInputNum] = useState<string>();
@@ -7,7 +7,7 @@ function App(): JSX.Element {
 
   const handleFizzBuzzBtn = () => {
     if (inputNum) {
-      setFizzBuzzResult(FizzBuzz(Number(inputNum)));
+      setFizzBuzzResult(fizzBuzz(Number(inputNum)));
     }
   };
 
