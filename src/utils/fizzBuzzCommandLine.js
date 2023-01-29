@@ -23,8 +23,7 @@ function fizzBuzzCommandLine(inputNum) {
             fizzBuzzArr.push(num);
         }
     }
-    var finalString = fizzBuzzArr.join(",");
-    return finalString;
+    return fizzBuzzArr.join(",");
 }
 exports.fizzBuzzCommandLine = fizzBuzzCommandLine;
 var input = process.argv[2];

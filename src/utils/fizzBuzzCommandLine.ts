@@ -19,8 +19,7 @@ export function fizzBuzzCommandLine(inputNum: number): string {
       fizzBuzzArr.push(num);
     }
   }
-  const finalString: string = fizzBuzzArr.join(",");
-  return finalString;
+  return fizzBuzzArr.join(",");
 }
 
 const input = process.argv[2];
