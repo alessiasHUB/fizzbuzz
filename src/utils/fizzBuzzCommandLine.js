@@ -1,10 +1,12 @@
-"use strict";
+/* eslint-disable @typescript-eslint/no-var-requires */
 exports.__esModule = true;
 exports.fizzBuzzCommandLine = void 0;
+
 var checkBuzz_1 = require("./checkBuzz");
 var checkFizz_1 = require("./checkFizz");
 var checkFizzBuzz_1 = require("./checkFizzBuzz");
 var makeArray_1 = require("./makeArray");
+
 function fizzBuzzCommandLine(inputNum) {
   var numArr = (0, makeArray_1.makeArray)(inputNum);
   var fizzBuzzArr = [];

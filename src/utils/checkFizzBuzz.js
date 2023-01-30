@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 exports.checkFizzBuzz = void 0;
 function checkFizzBuzz(num) {

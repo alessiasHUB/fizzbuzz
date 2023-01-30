@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 exports.makeArray = void 0;
 function makeArray(num) {
